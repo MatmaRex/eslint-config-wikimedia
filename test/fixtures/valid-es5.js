@@ -31,7 +31,6 @@
 	 *
 	 * @class
 	 *
-	 * @constructor
 	 * @param {string} id
 	 * @param {Object} options
 	 */

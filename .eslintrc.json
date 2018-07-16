@@ -121,6 +121,19 @@
         "yields": "yield",
         "linkcode": "link",
         "linkplain": "link"
+      },
+      "preferType": {
+        "Boolean": "boolean",
+        "Number": "number",
+        "String": "string",
+        "Undefined": "undefined",
+        "Null": "null",
+        "object": "Object",
+        "array": "Array",
+        "function": "Function",
+        "date": "Date",
+        "regexp": "RegExp",
+        "error": "Error"
       }
     } ],
     "vars-on-top": "error",

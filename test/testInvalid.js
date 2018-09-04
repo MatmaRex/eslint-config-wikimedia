@@ -7,7 +7,7 @@ var assert = require( 'assert-diff' ),
 	fixture5 = fs.readFileSync( __dirname + '/fixtures/invalid-es5.js' ).toString(),
 	fixture6 = fs.readFileSync( __dirname + '/fixtures/invalid-es6.js' ).toString(),
 	fixtureQUnit = fs.readFileSync( __dirname + '/fixtures/qunit/invalid-qunit.js' ).toString(),
-	config = require( '../.eslintrc.json' ),
+	config = require( '../wikimedia.json' ),
 	configQUnit = require( '../qunit.json' ),
 	count, engine, report, results, expected, testPositives,
 	prevFilename, prevLine;
@@ -56,7 +56,8 @@ console.log( 'Verified ' + ( results[ 0 ].length + results[ 1 ].length ) + ' exp
 // Verify coverage
 count = 0;
 testPositives = [
-	'arrow-parens' // Has an invalid test case
+	'arrow-parens', // Has an invalid test case
+	'quotes' // Has an invalid test case
 ];
 Object.keys( config.rules ).concat( Object.keys( configQUnit.rules ) ).forEach( function ( rule ) {
 	var rDisableRule = new RegExp( '(/[/*]) eslint-disable(-next-line)? ([a-z-]+, )??' + rule );
